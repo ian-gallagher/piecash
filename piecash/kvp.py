@@ -274,6 +274,7 @@ class SlotFrame(DictWrapper, Slot):
         collection_class=CallableList,
         single_parent=True,
         backref=backref("parent", remote_side=guid_val),
+        overlaps="parent,slots",
     )
 
     @property
